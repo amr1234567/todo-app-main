@@ -1,0 +1,22 @@
+.body {
+  background-image: url("assets/bg-desktop-light");
+  background-color: var(--Very-Light-Gray);
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.image-background {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.body-dark {
+  background-color: var(--Very-Dark-Blue);
+}
+
+.body-light {
+  background-color: var(--Very-Light-Gray);
+}

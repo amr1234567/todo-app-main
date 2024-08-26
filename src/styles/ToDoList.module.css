@@ -1,0 +1,69 @@
+.todo-container {
+   margin-top: 2rem;
+   border-radius: 5px;
+   display: flex;
+   flex-direction: column;
+}
+
+.dark {
+   background-color: var(--Very-Dark-Desaturated-Blue);
+   color: var(--Very-Light-Gray);
+}
+
+.light {
+   background-color: var(--Very-Light-Gray);
+   color: var(--Very-Dark-Blue);
+}
+
+.todo-item {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 1rem 1.5rem;
+   border-bottom: 1px solid var(--Very-Dark-Grayish-Blue);
+}
+
+.todo-info {
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+   width: 90%;
+}
+
+.todo-check-radio {
+   width: 1.6rem;
+   height: 1.5rem;
+   border-radius: 50%;
+   border: 1px solid var(--Dark-Grayish-Blue);
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.todo-check-radio-default {
+   background-color: transparent;
+}
+
+.todo-check-radio-checked {
+   /* background-image: linear-gradient(); */
+   background-image: var(--Check-Background);
+}
+
+.todo-text-completed {
+   text-decoration: line-through;
+   color: var(--Dark-Grayish-Blue);
+}
+
+.delete-todo {
+   display: none;
+   transition: 0.1s ease-in-out;
+   cursor: pointer;
+   outline: none;
+   border: none;
+   background-color: transparent;
+}
+
+.todo-item:hover .delete-todo {
+   display: block;
+}
