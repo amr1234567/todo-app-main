@@ -67,3 +67,10 @@
 .todo-item:hover .delete-todo {
    display: block;
 }
+@media (max-width: 340px) {
+   .todo-check-radio {
+      width: 1rem;
+      height: 1rem;
+   }
+
+}

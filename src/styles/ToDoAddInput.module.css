@@ -1,9 +1,8 @@
 .input-container {
    width: 100%;
-   padding: 0.5rem;
    border-radius: 5px;
    display: flex;
-   padding-left: 2rem;
+   padding-left: 1.5rem;
    align-items: center;
    gap: 1rem;
 }
@@ -19,7 +18,7 @@
 }
 
 .input {
-   width: 100%;
+   width: 90%;
    background-color: transparent;
    outline: none;
    border: none;
@@ -34,13 +33,22 @@
 
 .input:focus {
    caret-color: var(--Bright-Blue);
-   caret: 2px;
 }
 
 .radio-complete {
-   width: 1.6rem;
+   width: 1.5rem;
    height: 1.5rem;
    border-radius: 50%;
    border: 1px solid var(--Dark-Grayish-Blue);
    cursor: pointer;
+}
+@media (max-width: 340px) {
+   .input::placeholder {
+      font-size: x-small;
+   }
+
+   .radio-complete {
+      width: 1rem;
+      height: 1rem;
+   }
 }

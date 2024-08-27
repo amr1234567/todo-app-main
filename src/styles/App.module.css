@@ -1,5 +1,4 @@
 .body {
-  background-image: url("assets/bg-desktop-light");
   background-color: var(--Very-Light-Gray);
   width: 100%;
   min-height: 100vh;

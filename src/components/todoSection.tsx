@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import {
   toggleThemeToDarkIcon,
   toggleThemeToLightIcon,
@@ -9,9 +10,24 @@ import styles from "../styles/ToDoSection.module.css";
 import ToDoAddedInput from "./ToDoAddedInput";
 import TodoList from "./todoList";
 import ToDoListFooter from "./toDoListFooter";
+import ToDoListFooterForMobile from "./ToDoListFooterForMobile";
 
 function ToDoSection() {
   const { theme } = useAppSelector((state) => state.theme);
+  const [customInnerWidth, setCustomInnerWidth] = useState(innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setCustomInnerWidth(innerWidth);
+    };
+
+    // Add event listener to the resize event
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const dispatch = useAppDispatch();
   return (
     <div className={styles.main}>
@@ -34,7 +50,12 @@ function ToDoSection() {
       <main className={styles.container}>
         <ToDoAddedInput />
         <TodoList />
-        <ToDoListFooter />
+
+        {customInnerWidth > 600 ? (
+          <ToDoListFooter />
+        ) : (
+          <ToDoListFooterForMobile />
+        )}
       </main>
     </div>
   );
