@@ -4,8 +4,8 @@
   /*Primary*/
   --Bright-Blue: hsl(220, 98%, 61%);
   --Check-Background: linear-gradient(to right, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-  /* NeutralLight*/
-  /* Theme*/
+  /* Neutral*/
+    /*Light Theme*/
   --Very-Light-Gray: hsl(0, 0%, 98%);
   --Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
   --Light-Grayish-Blue: hsl(233, 11%, 84%);

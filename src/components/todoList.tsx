@@ -4,8 +4,8 @@ import { useAppSelector } from "../store/applicationStore";
 import styles from "../styles/ToDoList.module.css";
 import ToDoItem from "./ToDoItem";
 import { Task } from "../models/task";
-import { PaginationEnum } from "../constants/paginationEnum";
-import { ThemeEnum } from "../models/themeEnum";
+import { PaginationEnum } from "../constants/enums/paginationEnum";
+import { ThemeEnum } from "../constants/enums/themeEnum";
 import classNames from "classnames";
 
 function TodoList() {

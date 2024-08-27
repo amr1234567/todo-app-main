@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { ThemeEnum } from "../models/themeEnum";
+import { ThemeEnum } from "../constants/enums/themeEnum";
 
 const initialState = {
   theme: ThemeEnum.Dark,

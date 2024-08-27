@@ -4,7 +4,7 @@ import {
   toggleThemeToLightIcon,
 } from "../constants/imageImport";
 import { ToggleTheme } from "../contexts/ThemeContext";
-import { ThemeEnum } from "../models/themeEnum";
+import { ThemeEnum } from "../constants/enums/themeEnum";
 import { useAppDispatch, useAppSelector } from "../store/applicationStore";
 import styles from "../styles/ToDoSection.module.css";
 import ToDoAddedInput from "./ToDoAddedInput";

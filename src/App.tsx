@@ -5,7 +5,7 @@ import {
   darkMobile,
   lightMobile,
 } from "./constants/imageImport";
-import { ThemeEnum } from "./models/themeEnum";
+import { ThemeEnum } from "./constants/enums/themeEnum";
 import { useAppSelector } from "./store/applicationStore";
 import styles from "./styles/App.module.css";
 import ToDoSection from "./components/todoSection";
@@ -14,6 +14,19 @@ import { useEffect, useState } from "react";
 function App() {
   const { theme } = useAppSelector((state) => state.theme);
   const [customInnerWidth, setCustomInnerWidth] = useState(innerWidth);
+  function getBackGroundImage() {
+    if (theme == ThemeEnum.Dark) {
+      if (customInnerWidth > 770) {
+        return darkDesktop;
+      } else {
+        return darkMobile;
+      }
+    } else if (customInnerWidth > 770) {
+      return lightDesktop;
+    } else {
+      return lightMobile;
+    }
+  }
   useEffect(() => {
     const handleResize = () => {
       setCustomInnerWidth(innerWidth);
@@ -35,15 +48,7 @@ function App() {
       )}
     >
       <img
-        src={
-          theme == ThemeEnum.Dark
-            ? customInnerWidth > 770
-              ? darkDesktop
-              : darkMobile
-            : customInnerWidth > 770
-            ? lightDesktop
-            : lightMobile
-        }
+        src={getBackGroundImage()}
         alt=""
         className={styles["image-background"]}
       />

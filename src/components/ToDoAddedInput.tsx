@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../store/applicationStore";
 import { addNewTask } from "../contexts/TasksContext";
 import styles from "../styles/ToDoAddInput.module.css";
-import { ThemeEnum } from "../models/themeEnum";
+import { ThemeEnum } from "../constants/enums/themeEnum";
 import classNames from "classnames";
 
 function ToDoAddedInput() {

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { PaginationEnum } from "../constants/paginationEnum";
+import { PaginationEnum } from "../constants/enums/paginationEnum";
 
 const initialState = {
    PaginationMode: PaginationEnum.All,

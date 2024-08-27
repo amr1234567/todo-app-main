@@ -1,10 +1,10 @@
 import classNames from "classnames";
-import { PaginationEnum } from "../constants/paginationEnum";
+import { PaginationEnum } from "../constants/enums/paginationEnum";
 import { clearAllCompleted } from "../contexts/TasksContext";
 import { useAppDispatch, useAppSelector } from "../store/applicationStore";
 import styles from "../styles/ToDoSection.module.css";
 import { changePaginationMode } from "../contexts/paginationContext";
-import { ThemeEnum } from "../models/themeEnum";
+import { ThemeEnum } from "../constants/enums/themeEnum";
 function ToDoListFooter() {
   const state = useAppSelector((state) => state.Tasks);
   const { theme } = useAppSelector((state) => state.theme);

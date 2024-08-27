@@ -46,7 +46,6 @@
 }
 
 .todo-check-radio-checked {
-   /* background-image: linear-gradient(); */
    background-image: var(--Check-Background);
 }
 
